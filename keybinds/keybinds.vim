@@ -668,11 +668,6 @@ function! s:load_quitmap() abort
 endfunction
 
 function! s:load_windowmap() abort
-  "switch windw
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-l> <C-w>l
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
   " window
   nnoremap <Leader><TAB> <C-O><CR>
   nnoremap <leader>ws :<C-u>sp<CR>
