@@ -10,4 +10,11 @@ let g:vista_executive_for = {
   \ 'yaml': 'coc',
   \ 'typescript': 'coc',
   \ 'typescriptreact': 'coc',
+  \ 'cpp': 'coc',
+  \ 'java': 'coc',
+  \ 'scala': 'coc',
+  \ 'python': 'coc',
+  \ 'haskell': 'coc',
   \ }
+
+let g:vista_fzf_preview = ['right:50%']
