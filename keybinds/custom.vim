@@ -1,3 +1,35 @@
+let s:enable_whichkey = dein#tap('vim-which-key')
+
+nnoremap  ]b :<C-u>bp<CR>
+nnoremap  [b :<C-u>bn<CR>
+
+if dein#tap('vim-airline-themes')
+    nnoremap <silent> <Leader>bo call CloseAllBuffersButCurrent()<CR>
+    " Works for both buffers (when no tabs) and tabs
+    nmap <a-1> <Plug>AirlineSelectTab1
+    nmap <a-2> <Plug>AirlineSelectTab2
+    nmap <a-3> <Plug>AirlineSelectTab3
+    nmap <a-4> <Plug>AirlineSelectTab4
+    nmap <a-5> <Plug>AirlineSelectTab5
+    nmap <a-6> <Plug>AirlineSelectTab6
+    nmap <a-7> <Plug>AirlineSelectTab7
+    nmap <a-8> <Plug>AirlineSelectTab8
+    nmap <a-9> <Plug>AirlineSelectTab9
+    nmap <a-0> <Plug>AirlineSelectTab0
+    if s:enable_whichkey
+        let g:which_key_map.b = { 'name': '+buffer' }
+        let g:which_key_map.b.o = 'keep current buffer'
+    endif
+endif
+
+nnoremap <Leader>tn :set number!<CR>
+nnoremap <Leader>tr :set relativenumber!<CR>
+if s:enable_whichkey
+    let g:which_key_map.t = { 'name': '+toggle' }
+    let g:which_key_map.t.n = 'Number toggle'
+    let g:which_key_map.t.r = 'Relnumber toggle'
+endif
+
 nnoremap Y y$
 
 " g Leader key
